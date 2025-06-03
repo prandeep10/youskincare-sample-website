@@ -48,17 +48,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary-gold);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .logo-icon {
@@ -76,7 +83,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .nav-menu a {
@@ -84,6 +91,7 @@
             text-decoration: none;
             transition: color 0.3s ease;
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .nav-menu a:hover {
@@ -124,28 +132,81 @@
             font-weight: bold;
         }
 
+        .mobile-menu-toggle {
+            display: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 26, 0.98);
+            z-index: 999;
+            padding: 5rem 2rem 2rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: var(--text-light);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .mobile-menu-items a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-items a:hover {
+            color: var(--primary-gold);
+        }
+
         /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, var(--light-beige) 0%, #E8D5C4 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding: 100px 0 50px;
         }
 
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--text-dark);
@@ -153,7 +214,7 @@
         }
 
         .hero-tagline {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--primary-gold);
             margin-bottom: 1.5rem;
             font-weight: 300;
@@ -161,7 +222,7 @@
         }
 
         .hero-description {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.8;
             line-height: 1.8;
@@ -196,18 +257,21 @@
 
         .product-showcase {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .product-item {
             background: var(--dark-bg);
             border-radius: 20px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             color: var(--text-light);
             transition: all 0.3s ease;
             animation: float 6s ease-in-out infinite;
+            min-width: 120px;
         }
 
         .product-item:nth-child(2) {
@@ -225,21 +289,21 @@
         }
 
         .product-icon {
-            width: 80px;
-            height: 120px;
+            width: 60px;
+            height: 80px;
             background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
             border-radius: 15px;
             margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--dark-bg);
         }
 
         /* Features Section */
         .features {
-            padding: 5rem 0;
+            padding: 4rem 0;
             background: var(--dark-bg);
             color: var(--text-light);
         }
@@ -247,25 +311,25 @@
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 3rem;
             color: var(--primary-gold);
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .feature-card {
             background: rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 20px;
             text-align: center;
             transition: all 0.3s ease;
@@ -279,20 +343,20 @@
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-gold);
             margin-bottom: 1.5rem;
         }
 
         .feature-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
 
         /* Products Section */
         .products {
-            padding: 5rem 0;
+            padding: 4rem 0;
             background: var(--light-beige);
         }
 
@@ -318,35 +382,27 @@
 
         .product-image {
             height: 300px;
-            background: var(--dark-bg);
+            background: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
-        .product-bottle {
-            width: 80px;
-            height: 140px;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
-            border-radius: 10px;
-            position: relative;
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .product-bottle::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30px;
-            height: 20px;
-            background: var(--dark-bg);
-            border-radius: 5px;
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
         }
 
         .product-info {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .product-name {
@@ -418,6 +474,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .newsletter-button:hover {
@@ -434,15 +491,21 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
         }
 
         .footer-section h3 {
             color: var(--primary-gold);
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
         .footer-section a {
@@ -451,6 +514,7 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
@@ -486,6 +550,7 @@
             padding-top: 2rem;
             border-top: 1px solid #333;
             color: #666;
+            font-size: 0.9rem;
         }
 
         /* Mobile Responsiveness */
@@ -494,13 +559,107 @@
                 display: none;
             }
 
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 2rem;
             }
 
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .hero-description {
+                font-size: 0.9rem;
+            }
+
+            .product-showcase {
+                gap: 0.5rem;
+            }
+
+            .product-item {
+                padding: 1rem;
+                min-width: 100px;
+            }
+
+            .product-icon {
+                width: 50px;
+                height: 60px;
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .newsletter-button {
+                padding: 15px 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .hero {
+                padding: 80px 0 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-container {
+                padding: 0 0.5rem;
+            }
+
+            .features {
+                padding: 3rem 0;
+            }
+
+            .products {
+                padding: 3rem 0;
+            }
+
+            .newsletter {
+                padding: 3rem 0;
             }
 
             .product-showcase {
@@ -508,8 +667,13 @@
                 gap: 1rem;
             }
 
-            .newsletter-form {
-                flex-direction: column;
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
         }
 
@@ -524,6 +688,16 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Loading states */
+        .product-image img {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-image img.loaded {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -531,7 +705,8 @@
     <header class="header">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">YS</div>
+                <img src="logo.jpeg" alt="You Skincare Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="logo-icon" style="display: none;">YS</div>
                 You Skincare
             </a>
             <nav class="nav-menu">
@@ -546,9 +721,26 @@
                     <i class="fas fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
                 </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="mobile-menu-items">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#science">Science</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -624,35 +816,58 @@
             <div class="products-grid">
                 <div class="product-card fade-in">
                     <div class="product-image">
-                        <div class="product-bottle"></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Radiance Serum</h3>
-                        <p class="product-description">Advanced vitamin C serum that brightens and evens skin tone while providing antioxidant protection.</p>
-                        <div class="product-price">$89</div>
-                        <button class="add-to-cart" onclick="addToCart('Radiance Serum', 89)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <div class="product-bottle"></div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Hydra Moisturizer</h3>
-                        <p class="product-description">Deeply hydrating moisturizer with hyaluronic acid and peptides for plump, youthful skin.</p>
-                        <div class="product-price">$75</div>
-                        <button class="add-to-cart" onclick="addToCart('Hydra Moisturizer', 75)">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <div class="product-bottle"></div>
+                        <img src="https://sfycdn.speedsize.com/56385b25-4e17-4a9a-9bec-c421c18686fb/beminimalist.co/cdn/shop/files/SalicylicCleanserNew.jpg?crop=center&height=540&v=1721379190&width=360" 
+                             alt="Salicylic Cleanser" 
+                             onload="this.classList.add('loaded')"
+                             onerror="this.style.display='none'">
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Gentle Cleanser</h3>
-                        <p class="product-description">Luxurious cleansing gel that removes impurities while maintaining skin's natural moisture barrier.</p>
+                        <p class="product-description">Luxurious cleansing gel that removes impurities while maintaining skin's natural moisture barrier with salicylic acid.</p>
                         <div class="product-price">$45</div>
                         <button class="add-to-cart" onclick="addToCart('Gentle Cleanser', 45)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://sfycdn.speedsize.com/56385b25-4e17-4a9a-9bec-c421c18686fb/beminimalist.co/cdn/shop/files/SPF50New.jpg?crop=center&height=540&v=1721379190&width=360" 
+                             alt="SPF 50 Sunscreen" 
+                             onload="this.classList.add('loaded')"
+                             onerror="this.style.display='none'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">SPF 50 Protection</h3>
+                        <p class="product-description">Broad-spectrum sunscreen with SPF 50 that provides superior protection while maintaining a lightweight, non-greasy feel.</p>
+                        <div class="product-price">$55</div>
+                        <button class="add-to-cart" onclick="addToCart('SPF 50 Protection', 55)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://sfycdn.speedsize.com/56385b25-4e17-4a9a-9bec-c421c18686fb/beminimalist.co/cdn/shop/products/SalicylicAcid2_1200-1-min.png?crop=center&height=540&v=1646458899&width=360" 
+                             alt="Salicylic Acid 2% Serum" 
+                             onload="this.classList.add('loaded')"
+                             onerror="this.style.display='none'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Salicylic Acid 2% Serum</h3>
+                        <p class="product-description">Powerful exfoliating serum with 2% salicylic acid to unclog pores, reduce blackheads, and improve skin texture.</p>
+                        <div class="product-price">$65</div>
+                        <button class="add-to-cart" onclick="addToCart('Salicylic Acid 2% Serum', 65)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://sfycdn.speedsize.com/56385b25-4e17-4a9a-9bec-c421c18686fb/beminimalist.co/cdn/shop/products/VitaminC10_1200-1-min.png?crop=center&height=540&v=1646543848&width=360" 
+                             alt="Vitamin C 10% Serum" 
+                             onload="this.classList.add('loaded')"
+                             onerror="this.style.display='none'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Vitamin C 10% Serum</h3>
+                        <p class="product-description">Advanced vitamin C serum that brightens and evens skin tone while providing powerful antioxidant protection.</p>
+                        <div class="product-price">$75</div>
+                        <button class="add-to-cart" onclick="addToCart('Vitamin C 10% Serum', 75)">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -739,6 +954,37 @@
             event.target.reset();
         }
 
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenuItems = document.querySelectorAll('.mobile-menu-items a');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
         // Notification system
         function showNotification(message) {
             const notification = document.createElement('div');
@@ -755,6 +1001,8 @@
                 transform: translateX(100%);
                 transition: transform 0.3s ease;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                max-width: 300px;
+                word-wrap: break-word;
             `;
             notification.textContent = message;
             document.body.appendChild(notification);
@@ -766,7 +1014,9 @@
             setTimeout(() => {
                 notification.style.transform = 'translateX(100%)';
                 setTimeout(() => {
-                    document.body.removeChild(notification);
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
                 }, 300);
             }, 3000);
         }
@@ -813,15 +1063,17 @@
             }
         });
 
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-        });
+        // Parallax effect for hero section (disabled on mobile for performance)
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.2;
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${rate}px)`;
+                }
+            });
+        }
 
         // Initialize animations on page load
         window.addEventListener('load', () => {
@@ -830,6 +1082,63 @@
                     el.style.animationDelay = `${index * 0.1}s`;
                 }, 100);
             });
+        });
+
+        // Touch gesture support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left - could trigger mobile menu close
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+
+        // Lazy loading for images
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                }
+            });
+        });
+
+        // Observe all images with data-src attribute for lazy loading
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Performance optimization: Reduce animations on slower devices
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (reduceMotion.matches) {
+            document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        }
+
+        // Resize handler for responsive adjustments
+        window.addEventListener('resize', () => {
+            // Close mobile menu on resize to larger screen
+            if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
